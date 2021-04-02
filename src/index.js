@@ -331,12 +331,16 @@ document.getElementById("todoSubmit").addEventListener('click', function(){
     clearFields();
 })
 
-if(localStorage.length == 0){
+function pageLoad(){
+    if(localStorage.length == 0){
     defaultProject();
     updateLocalStorage();
 } else {
     checkStorage();
 }
+}
+
+pageLoad();
 
 addTodoFinder();
 expandSlide();
