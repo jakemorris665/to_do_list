@@ -7,6 +7,57 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+
+    <div class="overlay" id="overlay">
+
+        <div class="modal project-form">
+          <div class="closeWindow" id="closeWindow">x</div>
+          <label for="title">Title:</label>
+          <input type="text" id="projectTitle">
+
+          <div class="date-urgent-wrap">
+            <input type="date" id="projectDate">
+            <select id="urgencySetting">
+              <option value="0">Priority:</option>
+              <option value="normal">normal</option>
+              <option value="urgent">high</option>
+            </select>
+          </div>
+          
+          <label for="notes">Notes:</label>
+          <textarea rows="3" cols="50" maxlength="500" id="projectNote"></textarea>
+
+          <div class="modal-form-btn-wrap">
+              <button type="submit" id="projectSubmit" class="projectSubmit">Submit</button>
+              <button type="submit" id="todoSubmit" class="todoSubmit">Submit</button>
+          </div>
+
+        </div>
+
+    </div>
+    
+
+    <div class="project-bar" id="projectBar">
+        <div class="project-header-container">
+            <header class="project-bar-title">My Projects:</header>
+            <button class="add" id="add1">New</button>
+            <button class="save" id="save">Save</button>
+            <button class="clear" id="clear">Clear</button>
+        </div>
+
+        <div class="project-bar-container" id="project-bar-container">        </div>
+    </div>
+    
+    <div class="todo-list" id="todo-list">
+
+        <div class="todo-header-container">
+            <header class="todo-list-title">My Tasks:</header>
+            <h2 class="currentListHeader" id="currentListHeader">Current List:</h2>
+            <button class="add" id="add2">New</button>
+        </div>
+    </div>
+        
+  </div>
         
     <script src="main.js"></script>
   </body>
